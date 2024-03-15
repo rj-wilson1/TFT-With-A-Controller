@@ -19,5 +19,5 @@ Step 4: Go to Steam to Edit Controller Layout
 ![Image](https://github.com/users/rj-wilson1/projects/2/assets/158510572/0462b365-ee8a-4b7e-8bd6-75cb599b48d7)
 
 Step 5:  Start a game!
--Start a game of TFT and while loading in or before the game starts, double click the .exe file to get the script running and working
--remember to end the script you can press Ctrl+Alt+Q
+- Start a game of TFT and while loading in or before the game starts, double click the .exe file to get the script running and working
+- Remember to end the script you can press Ctrl+Alt+Q
