@@ -16,7 +16,8 @@ Step 4: Go to Steam to Edit Controller Layout
 - Edit the layout so that it corresponds with the layout in the picture given
 - To do the subkeys for right joystick; Make the first command 'Control Key' then press the settings gear next to it and click 'Add Sub command, In the sub command add the the corresponding arrow key
 
-![Image](https://github.com/users/rj-wilson1/projects/1/assets/158510572/0462b365-ee8a-4b7e-8bd6-75cb599b48d7)
+![RJ TFT Controller Layout Picture](https://github.com/rj-wilson1/TFT-With-A-Controller/assets/158510572/83771b2c-ad38-41b5-ad31-d2eda34ea1b4)
+
 
 Step 5:  Start a game!
 - Start a game of TFT and while loading in or before the game starts, double click the .exe file to get the script running and working
