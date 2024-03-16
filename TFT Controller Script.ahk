@@ -1,4 +1,4 @@
-﻿; Initialize an array to store the position coordinates of various elements
+; Initialize an array to store the position coordinates of various elements
 PositionCoordinates := []
 
 ; Define the position coordinates for each hex in the battlefield
@@ -75,10 +75,42 @@ mainPositionTracker := 1
 Up::
 {
     ; Move up by rows on the battlefield
-    if (mainPositionTracker >= 1 && mainPositionTracker <= 7)
+    if (mainPositionTracker >= 1 && mainPositionTracker <= 2)
     {
-        return
+        mainPositionTracker := 38
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
     }
+
+    else if (mainPositionTracker == 3)
+    {
+        mainPositionTracker := 39
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
+    }
+
+    else if (mainPositionTracker == 4)
+    {
+        mainPositionTracker := 40
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
+    }
+
+    else if (mainPositionTracker >= 5 && mainPositionTracker <= 6)
+    {
+        mainPositionTracker := 41
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
+    }
+
+    else if (mainPositionTracker == 7)
+    {
+        mainPositionTracker := 42
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
+    }
+
+    else if (mainPositionTracker >= 1 && mainPositionTracker <= 2)
+    {
+        mainPositionTracker :=38
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
+    }
+
     ; Move up from rows 2 and 3 of the battlefield to the upper rows
     else if (mainPositionTracker >= 8 && mainPositionTracker <= 28)
     {
@@ -170,9 +202,22 @@ Up::
 ; Down Dpad
 Down::
 {
-    if (mainPositionTracker >= 38 && mainPositionTracker <= 42)
+    if (mainPositionTracker >= 38 && mainPositionTracker <= 39)
     {
-        return
+        mainPositionTracker -= 37
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
+    }
+
+    else if (mainPositionTracker >= 40 && mainPositionTracker <= 41)
+    {
+        mainPositionTracker -= 36
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
+    }
+
+    else if (mainPositionTracker == 42)
+    {
+        mainPositionTracker -= 35
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
     }
     ; Move down by rows on the battlefield
     else if (mainPositionTracker >= 1 && mainPositionTracker <= 21) 
@@ -267,11 +312,31 @@ Left::
         mainPositionTracker := 47
         MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
     }
-    else if (mainPositionTracker == 38 || mainPositionTracker == 43
-            || mainPositionTracker == 50 || mainPositionTracker == 52)
+    else if (mainPositionTracker == 38)
     {
-        return
+        mainPositionTracker := 42
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
     }
+
+    else if (mainPositionTracker == 43)
+    {
+        mainPositionTracker := 21
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1r
+    }
+
+    else if (mainPositionTracker == 45)
+    {
+        mainPositionTracker := 28
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1r
+    }
+
+
+    else if (mainPositionTracker == 50 || mainPositionTracker == 52)
+    {
+        mainPositionTracker := 37
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1r
+    }
+
     else if(mainPositionTracker == 29)
     {
         mainPositionTracker := 51
@@ -298,15 +363,36 @@ Left::
 ; Right Dpad
 Right::
 {
-    if (mainPositionTracker = 7 || mainPositionTracker = 14 || mainPositionTracker = 21)
+    if (mainPositionTracker = 7 || mainPositionTracker = 14) 
     {
-        mainPositionTracker += 7
+        mainPositionTracker -= 6
         MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
     }
-    else if (mainPositionTracker == 28 || mainPositionTracker == 37 || mainPositionTracker == 42)
+
+    else if (mainPositionTracker = 21 || mainPositionTracker == 28)
     {
-        return
+        mainPositionTracker := 43
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
     }
+
+    else if (mainPositionTracker == 28)
+    {
+        mainPositionTracker := 45
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
+    }
+
+    else if (mainPositionTracker == 37)
+    {
+        mainPositionTracker := 52
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
+    }
+
+    else if (mainPositionTracker == 42)
+    {
+        mainPositionTracker := 38
+        MouseMove, PositionCoordinates[mainPositionTracker][1], PositionCoordinates[mainPositionTracker][2], 1
+    }
+
     else if (mainPositionTracker == 44)
     {
         mainPositionTracker += 3
